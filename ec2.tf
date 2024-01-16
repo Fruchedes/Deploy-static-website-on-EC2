@@ -80,7 +80,7 @@ data "aws_ami" "amazon_linux_2" {
 }
 
 
-# launch the ec2 instance and install website
+# launch the ec2 instance with user-data and installs website
 resource "aws_instance" "ec2_instance" {
   ami                    = data.aws_ami.amazon_linux_2.id
   instance_type          = "t2.micro"
